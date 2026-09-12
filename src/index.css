@@ -1,0 +1,261 @@
+/* RESET E ESTILOS GERAIS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --cor-primaria: #0d6efd;
+  --cor-primaria-hover: #0b5ed7;
+  --cor-secundaria: #6c757d;
+  --cor-secundaria-hover: #5c636a;
+}
+
+body {
+  background-color: #d0dceb;
+  color: #1c1e21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+
+
+
+/* CONTAINER PRINCIPAL (MOBILE FIRST) */
+.container, .container2 {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(252, 17, 17, 0.08);
+  width: 100%;
+  max-width: 480px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0f0f0f;
+  font-size: 1.5rem;
+}
+
+/* CARRINHO DE COMPRAS */
+.item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e9ecef;
+  padding: 14px 0;
+}
+
+.item-carrinho h4 {
+  font-size: 1rem;
+  color: #212529;
+  margin-bottom: 4px;
+}
+
+.detalhes {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.subtotal {
+  font-weight: 600;
+  color: #198754;
+}
+
+.resumo-compra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.resumo-compra h3 {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.total-valor {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #198754;
+}
+
+/* FORMULÁRIO DE PAGAMENTO */
+.form-pagamento {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campo-de-prenchimento, .campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-de-prenchimento label, .campo label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+
+.campo-de-prenchimento input, .campo input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo-de-prenchimento input:focus, .campo input:focus {
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+.linha-dupla {
+  display: flex;
+  gap: 12px;
+}
+
+.linha-dupla .campo {
+  flex: 1;
+}
+
+.erro {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+/* BOTÕES E AÇÕES */
+.acoes {
+  margin-top: 24px;
+}
+
+.btn-primary, .btn-secondary, .btn-primario, .btn-secundario {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  border: 0;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.btn-primary, .btn-primario {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+
+
+.btn-primary:hover, .btn-primario:hover {
+  background-color: var(--cor-primaria-hover);
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active, .btn-primario:active,
+.btn-secondary:active, .btn-secundario:active {
+  transform: translateY(0);
+}
+
+.btn-primary:focus-visible, .btn-primario:focus-visible,
+.btn-secondary:focus-visible, .btn-secundario:focus-visible {
+  outline: 3px solid rgba(13, 110, 253, 0.3);
+  outline-offset: 2px;
+}
+
+.btn-primary:disabled {
+  background-color: #6c757d;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.btn-secondary, .btn-secundario {
+  background-color: var(--cor-secundaria);
+  color: #ffffff;
+  margin-top: 16px;
+}
+
+.btn-secondary:hover, .btn-secundario:hover {
+  background-color: var(--cor-secundaria-hover);
+  box-shadow: 0 4px 10px rgba(108, 117, 125, 0.25);
+  transform: translateY(-1px);
+}’
+
+.btn-secondary:disabled, .btn-secundario:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+@media (max-width: 380px) {
+  body {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .container, .container2 {
+    padding: 20px 16px;
+  }
+
+  .linha-dupla {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .resumo-compra {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn-primary, .btn-secondary, .btn-primario, .btn-secundario {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}
+
+/* TELAS DE SUCESSO E FALHA */
+.mensagem-status {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.mensagem-status p {
+  margin: 12px 0 24px;
+  color: #6c757d;
+}
+
+.sucesso h2 {
+  color: #198754;
+}
+
+.falha h2 {
+  color: #dc3545;
+}
+
+/* RESPONSIVIDADE (DESKTOP) */
+@media (min-width: 768px) {
+  .container, .container2 {
+    max-width: 560px;
+    padding: 32px;
+  }
+}
+
