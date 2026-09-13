@@ -1,16 +1,47 @@
-# React + Vite
+# 🛒 Brivio - Loja Virtual
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **Brivio** é um sistema de e-commerce focado em eletrônicos que simula o fluxo completo de um carrinho de compras e checkout de pagamento com validação de dados em tempo real.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎯 Objetivo do Projeto
 
-## React Compiler
+O sistema foi criado com o objetivo de colocar em prática os conhecimentos adquiridos durante o módulo do curso, simulando uma experiência autêntica de compra e checkout em uma loja virtual, cobrindo validação de formulários, estados dinâmicos, rotas e regras de prevenção a fraudes no navegador.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## 📌 Funcionalidades e Fluxo da Aplicação
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Resumo do Carrinho:** Exibição dos itens selecionados, calculando o subtotal de cada produto e o valor total final em Reais (R$).
+
+2. **Formulário de Pagamento:** Cadastro e validação em tempo real dos dados do cartão de crédito (titular, número do cartão, validade e CVV).
+
+3. **Detecção de Fraude (Simulação de Golpe):** Algoritmo que identifica se todos os 16 dígitos do cartão inserido são idênticos (ex: `1111111111111111`). Caso detectado, a aplicação redireciona para a tela de falha exibindo a mensagem `"tentativa de golpe"`.
+
+4. **Confirmação de Compra:** Transações com dados válidos e cartões autênticos exibem a tela de compra aprovada com sucesso.
+
+
+## 🛠️ Tecnologias e Ferramentas
+
+- **React & Vite** 
+- **React Router Dom** 
+- **React Hook Form & Zod** 
+- **CSS Puro** 
+- **Ferramentas:** VSCode, Git, GitHub, Trello, PDFs ChatGPT e Gemini, DevTools
+
+## 📂 Estrutura do Projeto
+
+loja-virtual/
+├── public/              # Arquivos estáticos (logo.png)- Logo da guia da página
+├── src/
+│   ├── assets/          # Recursos visuais (logo.png)
+│   ├── components/      # Componentes reutilizáveis (ItemCarrinho.jsx, ResumoCompra.jsx)
+│   ├── data/            # Dados fictícios dos produtos (produtos.js)
+│   ├── hooks/           # Custom hook (usePagamento.js)
+│   ├── pages/           # Páginas (Carrinho.jsx, Pagamento.jsx, Sucesso.jsx, Falha.jsx)
+│   ├── utils/           # Funções utilitárias e regras de negócio
+│   ├── App.css          # Estilos do componente principal
+│   ├── App.jsx          # Configuração de rotas da aplicação
+│   ├── index.css        # Estilos da Loja Virtual
+│   └── main.jsx         # Ponto de entrada do React
+├── index.html           # HTML
+└── package.json         # Dependências do projeto
+

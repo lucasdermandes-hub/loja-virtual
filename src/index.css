@@ -6,8 +6,8 @@
 }
 
 :root {
-  --cor-primaria: #0d6efd;
-  --cor-primaria-hover: #0b5ed7;
+  --cor-primaria: #4850bb;
+  --cor-primaria-hover: #4fcde4;
   --cor-secundaria: #6c757d;
   --cor-secundaria-hover: #5c636a;
 }
@@ -68,8 +68,9 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
   margin-top: 24px;
-  padding: 16px;
+  padding: 23px;
   background-color: #f8f9fa;
   border-radius: 8px;
   border: 1px solid #e9ecef;
@@ -255,3 +256,13 @@ h2 {
   }
 }
 
+/* Imagem Logo */
+header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+header img {
+  width: 100px;
+}

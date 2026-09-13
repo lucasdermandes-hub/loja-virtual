@@ -4,8 +4,15 @@ import { Pagamento } from "./pages/Pagamento";
 import { Sucesso } from "./pages/Sucesso";
 import { Falha} from "./pages/Falha";
 
+import logoLoja from "./assets/logo.png";
+
 export function App() {
   return (
+    <>
+    <header>
+      <img src={logoLoja} alt="Logo Loja" />
+    </header>
+    
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Carrinho />} />
@@ -14,6 +21,9 @@ export function App() {
         <Route path="/falha" element={<Falha />} />
       </Routes>
       </BrowserRouter>
+
+    </>
+
   );
 }
 
