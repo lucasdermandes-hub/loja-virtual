@@ -1,4 +1,3 @@
-/* RESET E ESTILOS GERAIS */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,10 +22,7 @@ body {
   padding: 16px;
 }
 
-
-
-
-/* CONTAINER PRINCIPAL (MOBILE FIRST) */
+/* Container Principal (Mobile First) */
 .container, .container2 {
   background-color: #ffffff;
   padding: 24px;
@@ -43,7 +39,7 @@ h2 {
   font-size: 1.5rem;
 }
 
-/* CARRINHO DE COMPRAS */
+/* Carrinho de Compras */
 .item-carrinho {
   display: flex;
   justify-content: space-between;
@@ -90,7 +86,7 @@ h2 {
   color: #198754;
 }
 
-/* FORMULÁRIO DE PAGAMENTO */
+/* Formulário de Pagamento */
 .form-pagamento {
   display: flex;
   flex-direction: column;
@@ -140,7 +136,7 @@ h2 {
   margin-top: 2px;
 }
 
-/* BOTÕES E AÇÕES */
+/* Botões e ações */
 .acoes {
   margin-top: 24px;
 }
@@ -232,7 +228,7 @@ h2 {
   }
 }
 
-/* TELAS DE SUCESSO E FALHA */
+/* Mensagem de Sucesso e Falha*/
 .mensagem-status {
   text-align: center;
   padding: 32px 24px;
@@ -251,7 +247,7 @@ h2 {
   color: #dc3545;
 }
 
-/* RESPONSIVIDADE (DESKTOP) */
+/* Responsividade */
 @media (min-width: 768px) {
   .container, .container2 {
     max-width: 560px;
